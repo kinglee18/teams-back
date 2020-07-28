@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect('mongodb://172.17.0.2:27017/teams', { useNewUrlParser: true });
+mongoose.connect('mongodb://database:27017/teams', { useNewUrlParser: true });
 
 app.use(teamRouter);
 app.use(playerRouter);
